@@ -95,9 +95,9 @@ extra_require = {
 }
 
 setuptools.setup(
-    name="mypyautogen20240904",
+    name="pyautogen20240904",
     version=__version__,
-    author="AutoGen",
+    author="flexixiong",
     author_email="autogen-contact@service.microsoft.com",
     description="Enabling Next-Gen LLM Applications via Multi-Agent Conversation Framework",
     long_description=long_description,
