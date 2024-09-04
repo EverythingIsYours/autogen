@@ -95,7 +95,7 @@ extra_require = {
 }
 
 setuptools.setup(
-    name="pyautogen",
+    name="mypyautogen20240904",
     version=__version__,
     author="AutoGen",
     author_email="autogen-contact@service.microsoft.com",
