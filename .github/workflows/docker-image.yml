@@ -25,4 +25,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: autogencontainer.azurecr.io/Autogen:latest
+        tags: autogencontainer.azurecr.io/autogen:latest
