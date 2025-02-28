@@ -1,0 +1,28 @@
+name: Build and Push AutoGen Image to ACR
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Login to Azure Container Registry (ACR)
+      uses: azure/docker-login@v1
+      with:
+        login-server: autogencontainer.azurecr.io
+        username: autogencontainer
+        password: Cx5FDGRnp5hhNZiPGIrIUh6ed2yLp5hGzZdDF13HSy+ACRCcISmO
+
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: autogencontainer.azurecr.io/Autogen:latest
