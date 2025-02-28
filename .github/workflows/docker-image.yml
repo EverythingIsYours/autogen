@@ -17,8 +17,8 @@ jobs:
       uses: azure/docker-login@v1
       with:
         login-server: autogencontainer.azurecr.io
-        username: autogencontainer
-        password: Cx5FDGRnp5hhNZiPGIrIUh6ed2yLp5hGzZdDF13HSy+ACRCcISmO
+        username: ${{secrets.AZURE_ACR_USERNAME}}
+        password: ${{secrets.AZURE_ACR_PASSWORD}}
 
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v2
